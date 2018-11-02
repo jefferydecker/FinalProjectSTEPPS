@@ -26,7 +26,10 @@ Project Plan
 Sprints 	->Deliverables
 
 1	Create and test object classes for both forms.	->Object class code and working driver code
+
 2	Learn Window builder and make UI prototype.	->Rudimentary screen form code
+
 3	Flesh out UI and enter test forms	->Working (proof of concept prototype) application
-4	Learn and evaluate MySQL, decide whether to use it rather than data files, and develop methods to save data 	>Working (proof of concept prototype) application with data files
+
+4	Learn and evaluate MySQL, decide whether to use it rather than data files, and develop methods to save data 	->Working (proof of concept prototype) application with data files
 
