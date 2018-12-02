@@ -125,11 +125,11 @@ public class filterPanel extends JPanel implements ActionListener {
 		progressBar.setBounds(22, 260, 406, 20);
 		progressBar.setStringPainted(true);
 		add(progressBar);
+
 		btnPrev.setMnemonic('p');
 		btnPrev.setEnabled(false);
 		btnPrev.setToolTipText("Move to previous statement -- not yet implemented");
 		btnPrev.setBounds(247, 279, 97, 29);
-		
 		add(btnPrev);
 	}
 	
@@ -156,7 +156,7 @@ public class filterPanel extends JPanel implements ActionListener {
 			
 			// update progressBar and increment statement counter
 			progressBar.setValue(stmntNum++);
-			progressBar.setString(stmntNum +" of "+EOQ);
+			progressBar.setString(stmntNum +" of "+EOQ+" completed");
 
 			// check for last question
 			if(stmntNum == EOQ) {
@@ -181,10 +181,7 @@ public class filterPanel extends JPanel implements ActionListener {
 				// dequeue from statement priority queue and push onto prevStack
 				form.prevStack.push(form.stmntsPQ.remove());
 				// peek from prevStack and put into text area
-				txtrStmnt.setText(form.prevStack.peek() /*.substring(4)*/ );
-														// commented out code to skip
-														// statement number... for  now.
-
+				txtrStmnt.setText(form.prevStack.peek().substring(4));
 		}
 	}
 }
