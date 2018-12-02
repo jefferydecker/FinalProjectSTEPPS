@@ -138,15 +138,15 @@ public class filterPanel extends JPanel implements ActionListener {
 		// find which rating button is selected 	/?TODO: put into a method, say, hasSelected()? setSelected() ?/
 		boolean ratingSelectedFlag = true;	// assume one is selected until all are checked
 		if(tglbtn1.isSelected())
-			form.setRating(stmntNum, 1);
+			form.setRating(stmntNum, 0);
 		else if(tglbtn2.isSelected())
-			form.setRating(stmntNum, 2);
+			form.setRating(stmntNum, 1);
 		else if(tglbtn3.isSelected())
-			form.setRating(stmntNum, 3);
+			form.setRating(stmntNum, 2);
 		else if(tglbtn4.isSelected())
-			form.setRating(stmntNum, 4);
+			form.setRating(stmntNum, 3);
 		else if(tglbtn5.isSelected())
-			form.setRating(stmntNum, 5);
+			form.setRating(stmntNum, 4);
 		else ratingSelectedFlag = false;	// none have been selected
 		
 		// if something was selected, move on to next statement/question
