@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 /**
  * 
  */
@@ -24,7 +26,7 @@ public class formDataDriver {
 			FQ.setRating(i, value);
 			if ((i+1) % 6 == 0)
 				value++;
-//			if(value == 5) value = 0;	// keep within valid ratings though not
+			if(value == 5) value = 0;	// keep within valid ratings though not
 										// not necessary for this test
 		}
 		
@@ -41,7 +43,7 @@ public class formDataDriver {
 		// and three threes. For FQ there should be six of each digit from zero to
 		// nine. The same tests to divide the sections are used for summing the 
 		// sections in the form classes, so this should build confidence for that.
-		int[] Bratings = BEST.getRating();
+		int[] Bratings = BEST.getRatings();
 		int[] FQratings = FQ.getRating();
 		
 		for (int i=0; i<60; i++)
@@ -75,6 +77,10 @@ public class formDataDriver {
 		int[] BESTsum = BEST.getCategorySum();
 		System.out.print(BESTsum[0] + " + " + BESTsum[1]+" - "+BESTsum[2]);
 		System.out.println(" = overall BEST score of " + BEST.getOverallScore() );
+		System.out.println(FQ.getResultTable());
+		JOptionPane.showMessageDialog(null, FQ.getResultTable(), "Results", JOptionPane.PLAIN_MESSAGE);
+		FQ.saveForm();
+
 	}
 
 }
